@@ -1,0 +1,79 @@
+/* OpenLongr's main.css */
+/* Under GPL-3.0 */
+
+.center {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grey {
+    color: grey;
+}
+
+.btn {
+    display: block;
+    padding: .375rem .75rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    text-decoration: none;
+    color: #2f0202;
+}
+
+.goback {
+    height: 25px;
+    width: 100px;
+}
+
+.copyleft {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.name {
+    font-weight: 300;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+.link-form {
+    width: 300px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+html, body {
+    font-family: "Open Sans", sans-serif;
+}
+
+textarea, input {
+    font-family: "Open Sans", sans-serif;
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+textarea {
+    width: 25%;
+    height: 10em;
+}
+
+footer {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+}
