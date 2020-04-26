@@ -50,7 +50,7 @@ if (isset($_POST["message"])) {
     $Parsedown = new Parsedown();
     $message = $Parsedown->text($message);
 
-    if (strlen($message) <= 10420) {
+    if (strlen(strip_tags($message)) <= 10420) {
         $dsn = "mysql:host=" . env("mysql_address") . ";dbname=" . env("mysql_database") . ";port=".env("mysql_port").";charset=utf8mb4";
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
