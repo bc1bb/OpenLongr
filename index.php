@@ -28,7 +28,7 @@ if (sizeof($argument) === 2) {
     if (isset($row['text'])) {
         ?>
         <center>
-            <div>
+            <div class="message">
                 <?= $row['text'] ?>
             </div>
             <small class="grey">Message uploaded from <?= $row['country'] ?></small><br>

@@ -43,6 +43,11 @@
     text-align: center;
 }
 
+.message {
+    display: block;
+    word-break: break-all;
+}
+
 html, body {
     font-family: "Open Sans", sans-serif;
 }
