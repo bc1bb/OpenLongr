@@ -1,4 +1,5 @@
 # OpenLongr
+[![CodeFactor](https://www.codefactor.io/repository/github/jusdepatate/openlongr/badge)](https://www.codefactor.io/repository/github/jusdepatate/openlongr)
 
 ![OpenLongr](OpenLongr.gif)
 
