@@ -31,7 +31,7 @@ if (sizeof($argument) === 2) {
             <div class="message">
                 <?= $row['text'] ?>
             </div>
-            <small class="grey">Message uploaded from <?= $row['country'] ?></small><br>
+            <small class="grey">Message uploaded from <?= $row['country'] ?></small>
         </center>
         <?php
     } else {
@@ -48,8 +48,8 @@ if (sizeof($argument) === 2) {
                     <div class="center"><h1>Turn your giant messages into small links.</h1></div>
                     <form method="post" action="<?= env('ext_url') ?>/message.php">
                         <center>
-                            <textarea placeholder="Put your message here" type="text" name="message" required></textarea>
-                            <small class="grey">You can't put messages longer than 10420 characters</small>
+                            <textarea placeholder="Put your message here" name="message" required></textarea>
+                            <small class="grey">You can't put messages longer than <?= env("char_per_msg") ?> characters</small>
                             <input type="submit" value="Transformation" class="btn">
                         </center>
                     </form>

@@ -11,6 +11,7 @@ if (basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
         'title' => 'OpenLongr', // site name
         'ext_url' => 'http://127.0.0.1', // External URL !!! Don't put '/' at the end
         'char_per_id' => 8, // Number of characters to use per message ID
+        'char_per_msg' => 69420, // Number of characters allowed per messages
         #</general>
 
         #<MySQL>

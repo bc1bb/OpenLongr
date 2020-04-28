@@ -50,7 +50,7 @@ if (isset($_POST["message"])) {
     $Parsedown = new Parsedown();
     $message = $Parsedown->text($message);
 
-    if (strlen(strip_tags($message)) <= 10420) {
+    if (strlen(strip_tags($message)) <= env("char_per_msg")) {
         $dsn = "mysql:host=" . env("mysql_address") . ";dbname=" . env("mysql_database") . ";port=".env("mysql_port").";charset=utf8mb4";
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -96,7 +96,7 @@ if (isset($_POST["message"])) {
             ?>
             <h1 class="center">Your link is ready.</h1>
             <center>
-                <input type="text" class="link-form" value="<?= env("ext_url")."/?".$id ?>">
+                <input readonly type="text" class="link-form" value="<?= env("ext_url")."/?".$id ?>">
                 <a class="btn goback" href="<?= env("ext_url") ?>">Go back</a>
             </center>
             <?php
