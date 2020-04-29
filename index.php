@@ -31,8 +31,8 @@ if (sizeof($argument) === 2) {
             <div class="message">
                 <?= $row['text'] ?>
             </div>
-            <small class="grey">Message uploaded from <?= $row['country'] ?></small>
         </center>
+        <small class="grey from">Message uploaded from <?= $row['country'] ?></small>
         <?php
     } else {
         add_header();
