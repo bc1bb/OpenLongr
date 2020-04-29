@@ -1,6 +1,8 @@
 <?php
 
 require "autoload.php";
+require "src/html/header.php";
+require "src/html/footer.php";
 
 add_header();
 

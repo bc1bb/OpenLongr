@@ -1,8 +1,8 @@
 <?php
 
 require "autoload.php";
-
-add_header();
+require "src/html/header.php";
+require "src/html/footer.php";
 
 $argument = preg_split('/[\/].*[?]/', $_SERVER["REQUEST_URI"]);
 if (sizeof($argument) === 2) {
@@ -26,14 +26,16 @@ if (sizeof($argument) === 2) {
 
     $row = $req->fetch();
     if (isset($row['text'])) {
+        add_header();
         ?>
         <center>
             <div class="message">
                 <?= $row['text'] ?>
             </div>
         </center>
-        <small class="grey from">Message uploaded from <?= $row['country'] ?></small>
         <?php
+        add_footer("<small class=\"grey from\">Message uploaded from " . $row['country'] . "</small><br>");
+        die();
     } else {
         add_header();
         ?>
@@ -44,11 +46,14 @@ if (sizeof($argument) === 2) {
         <?php
     }
 } else {
+    add_header();
     ?>
                     <div class="center"><h1>Turn your giant messages into small links.</h1></div>
                     <form method="post" action="<?= env('ext_url') ?>/message.php">
                         <center>
-                            <textarea placeholder="Put your message here" name="message" required></textarea>
+                            <div id="epiceditor">
+                                <textarea placeholder="Put your message here" id="message" name="message" required></textarea>
+                            </div>
                             <small class="grey">You can't put messages longer than <?= env("char_per_msg") ?> characters</small>
                             <input type="submit" value="Transformation" class="btn">
                         </center>

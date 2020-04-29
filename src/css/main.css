@@ -68,17 +68,9 @@ textarea {
     height: 10em;
 }
 
-footer, .from {
-    position: fixed;
-}
-
 footer {
+    position: fixed;
     bottom: 5px;
-    left: 5px;
-}
-
-.from {
-    bottom: 25px;
     left: 5px;
 }
 

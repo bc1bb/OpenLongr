@@ -56,20 +56,4 @@ if (basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
             }
         }
     }
-
-    if (!function_exists("add_header")) {
-        function add_header() {
-            if (! is_curl()) {
-                require "src/html/header.php";
-            }
-        }
-    }
-
-    if (!function_exists("add_footer")) {
-        function add_footer() {
-            if (! is_curl()) {
-                require "src/html/footer.php";
-            }
-        }
-    }
 }

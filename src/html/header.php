@@ -1,16 +1,10 @@
 <?php
-
-if (basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
-    header("Status: 301 Moved Permanently", false, 301);
-    header("Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-    // si le fichier est appelé via un navigateur, rick roll ! :)
-    // sinon, donner les variables a PHP
-} else {
+function add_header(string $to_be_added = "") {
+    if (! is_curl()) {
     ?>
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
-
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="<?= env('ext_url') ?>/src/css/main.css" />
 
@@ -39,9 +33,11 @@ if (basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
     <meta name="twitter:image:alt" content="<?= env('title') ?> - Share messages easily & quickly.">
     <meta name="twitter:dnt" content="on">
 
+    <?= $to_be_added."\n" ?>
     <title><?= env('title') ?></title>
 </head>
 <body>
 <div><a class="name grey" href="<?= env('ext_url') ?>">OpenLongr</a></div>
     <?php
+    }
 }
