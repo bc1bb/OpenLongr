@@ -29,7 +29,7 @@ if (basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
     <meta property="og:image:alt" content="<?= env('title') ?> - Share messages easily & quickly.">
     <meta property="og:description" content="<?= env('title') ?> - Share messages easily & quickly.">
     <meta property="og:site_name" content="<?= env('title') ?>">
-    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@jusdepatate_">
