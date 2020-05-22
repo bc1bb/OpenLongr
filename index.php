@@ -52,7 +52,7 @@ if (sizeof($argument) === 2) {
                     <form method="post" action="<?= env('ext_url') ?>/message.php">
                         <center>
                             <div id="epiceditor">
-                                <textarea placeholder="Put your message here" id="message" name="message" required></textarea>
+                                <textarea placeholder="Put your message here" id="message" name="message" maxlength="<?= env("char_per_msg") ?>"required></textarea>
                             </div>
                             <small class="grey">You can't put messages longer than <?= env("char_per_msg") ?> characters</small>
                             <input type="submit" value="Transformation" class="btn">
