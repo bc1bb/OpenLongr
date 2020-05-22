@@ -47,9 +47,10 @@ function get_country(string $ip) {
 
 if (isset($_POST["message"])) {
     $message = $_POST["message"];
-    $message = strip_tags($message);
+    $message = strip_tags($message, "<br>");
 
     $Parsedown = new Parsedown();
+    $Parsedown->setSafeMode(true);
     $message = $Parsedown->text($message);
 
     if (strlen(strip_tags($message)) <= env("char_per_msg")) {
