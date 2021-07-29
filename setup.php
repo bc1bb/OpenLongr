@@ -2,7 +2,7 @@
 
 require "autoload.php";
 
-add_header();
+require "src/html/header.php";
 
 $dsn = "mysql:host=" . env("mysql_address") . ";dbname=" . env("mysql_database") . ";port=".env("mysql_port").";charset=utf8mb4";
 $options = [
@@ -32,4 +32,4 @@ try {
     }
 }
 
-add_footer();
+require "src/html/footer.php";
