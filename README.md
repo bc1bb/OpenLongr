@@ -3,7 +3,7 @@
 
 ![OpenLongr](OpenLongr.gif)
 
-OpenLongr is a user-friendly privacy-focused alternative to TwitLonger and sites like this.
+OpenLongr is a user-friendly privacy-focused alternative to TwitLonger. (now with dark theme too)
 
 No account or login required, just type your text (OpenLongr supports markdown) and it'll be published in a second.
 
@@ -27,6 +27,11 @@ wget https://github.com/jusdepatate/OpenLongr/archive/refs/heads/master.zip
 unzip master.zip
 ```
 
+and then
+```shell
+composer install
+```
+
 ### Configuration
 - Everything is in `env.php` (create it by copying `env.example.php`),
 - Execute `setup.php` and then you can delete it (if it tells you to).
@@ -36,5 +41,5 @@ I have created the script `status.php` to use with any uptime/monitoring (I use 
 
 Example request when everything is right: `curl http://openlongr.localhost/status.php -L`
 ```json
-{"status": "OK","database": "OK"}
+{"status": "OK"}
 ```

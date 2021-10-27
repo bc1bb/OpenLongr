@@ -7,6 +7,7 @@ function add_header(string $to_be_added = "") {
 <head>
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="<?= env('ext_url') ?>/src/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="<?= env('ext_url') ?>/src/css/water.css" />
 
     <!-- meta -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
