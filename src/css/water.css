@@ -1609,7 +1609,7 @@ footer {
   color: var(--text-muted);
   position: absolute;
   bottom: 0;
-  height: 100px;
+  /* height: 100px; */
   width: 40%;
 }
 
@@ -1623,7 +1623,7 @@ footer {
 
 body > footer {
   margin-top: 40px;
-}
+white-space: nowrap;}
 
 @media print {
   body,
